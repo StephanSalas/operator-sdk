@@ -64,7 +64,6 @@ func (r *Memcached) ValidateCreate() error {
 // ValidateUpdate implements webhook.Validator so a webhook will be registered for the type
 func (r *Memcached) ValidateUpdate(old runtime.Object) error {
 	memcachedlog.Info("validate update", "name", r.Name)
-
 	return validateOdd(r.Spec.Size)
 }
 
